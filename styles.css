@@ -1,0 +1,94 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-weight: 800;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #155799, #159957);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1400px;
+    margin: 0;
+    padding: 0 1.2em;
+}
+
+.mini-cards-grid {
+    max-width: 1400px;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 3rem 0 1.5rem;
+    position:relative;
+}
+
+@media (max-width: 1200px) {
+    body .mini-card-grid {
+        overflow-x:visible;
+    }
+}
+
+body .mini-card {
+    min-width: 250px;
+    min-height: 450px;
+    box-shadow:-2rem 0 3rem -2rem #000;
+}
+
+body .mini-card:not(:first-child) {
+    margin-left: -30px;
+    box-shadow:-3rem 0 3rem -2rem #000;
+}
+
+@media (max-width: 1200px) {
+    body .mini-card {
+        min-width:220px;
+    }
+
+    body .mini-card:not(:first-child) {
+        margin-left:-30px;
+    }
+}
+
+@media (max-width: 800px) {
+    body .mini-card {
+        min-width:190px;
+    }
+    body .mini-card:not(:first-child) {
+        margin-left:-10px;
+    }
+}
+
+body .mini-card:focus-within, body .mini-card:hover {
+    transform:translateY(-1rem) rotate(3deg);
+}
+
+body .mini-card:focus-within ~ .mini-card, body .mini-card:hover ~ .mini-card {
+    transform:translateX(20px);
+}
+
+body .mini-card:first-child:focus-within, body .mini-card:first-child:hover {
+    transform:translate(-.5rem, -1rem) rotate(3deg);
+}
+
+.mini-card {
+    padding: 2em;
+    background-image: linear-gradient(to bottom left, #008c9e, #2ebf91);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 0 0 1rem;
+    transition: .3s;
+    position: relative;
+    clear: both;
+    box-sizing: border-box;
+}
