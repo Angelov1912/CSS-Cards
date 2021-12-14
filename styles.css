@@ -13,6 +13,12 @@ h1 {
     text-align: center;
 }
 
+
+/*---Remove the margin of h2 if adding content---*/
+h2 {
+    margin-bottom: 10em;
+}
+
 body {
     background-image: linear-gradient(to bottom right, #155799, #159957);
     background-repeat: no-repeat;
@@ -67,6 +73,8 @@ body .mini-card:not(:first-child) {
     }
 }
 
+
+/*----Animation on hover----*/
 body .mini-card:focus-within, body .mini-card:hover {
     transform:translateY(-1rem) rotate(3deg);
 }
@@ -79,6 +87,7 @@ body .mini-card:first-child:focus-within, body .mini-card:first-child:hover {
     transform:translate(-.5rem, -1rem) rotate(3deg);
 }
 
+/*---Style the mini card---*/
 .mini-card {
     padding: 2em;
     background-image: linear-gradient(to bottom left, #008c9e, #2ebf91);
@@ -91,4 +100,32 @@ body .mini-card:first-child:focus-within, body .mini-card:first-child:hover {
     position: relative;
     clear: both;
     box-sizing: border-box;
+}
+
+
+/*---Autor row at the bottom of the card---*/
+.author {
+    -webkit-margin-before: auto;
+    margin-block-start: auto;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: .5rem;
+    align-items: center;
+    color: #ffffff;
+    line-height: 1.3;
+    padding-top: .5rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.author-name {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
